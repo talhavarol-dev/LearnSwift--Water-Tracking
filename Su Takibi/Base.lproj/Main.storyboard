@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dBr-4T-vE0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Water Tracker Controller-->
+        <scene sceneID="oQc-k6-fik">
+            <objects>
+                <viewController id="dBr-4T-vE0" customClass="WaterTrackerController" customModule="Su_Takibi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LnB-cW-AoG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ux6-kG-KUr">
+                                <rect key="frame" x="0.0" y="576" width="414" height="320"/>
+                                <color key="backgroundColor" name="systemTealColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="f19-he-LyY"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="MTg-gV-zH4">
+                                <rect key="frame" x="30" y="94" width="354" height="162"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbd-LL-jBa">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="106"/>
+                                        <string key="text">Merhaba!
+Bugün su içtin mi?</string>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDX-8Y-U5e">
+                                        <rect key="frame" x="0.0" y="121" width="354" height="41"/>
+                                        <string key="text">Bugünkü ihtiyacını karşılamak için; 
+2.7 litre daha su içmelisin.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="mhB-0B-g6i">
+                                <rect key="frame" x="30" y="691.5" width="354" height="140.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NFm-Pg-WbW">
+                                        <rect key="frame" x="0.0" y="0.0" width="107.5" height="140.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07t-6Z-nwJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="107.5" height="107.5"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="07t-6Z-nwJ" secondAttribute="height" multiplier="1:1" id="wsa-8z-WMY"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                                                <state key="normal" image="Glass"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="18"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addWaterOne:" destination="dBr-4T-vE0" eventType="touchUpInside" id="KMo-ly-6hZ"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200 ml" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qv-Wx-cP1">
+                                                <rect key="frame" x="0.0" y="117.5" width="107.5" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="aT2-BL-zVz">
+                                        <rect key="frame" x="122.5" y="0.0" width="108" height="140.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wnx-F0-Psd">
+                                                <rect key="frame" x="0.0" y="0.0" width="108" height="108.5"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Wnx-F0-Psd" secondAttribute="height" multiplier="1:1" id="Oux-KI-hFE"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                                                <state key="normal" image="Bottle"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="18"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addWaterOne:" destination="dBr-4T-vE0" eventType="touchUpInside" id="OPi-pt-seK"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500 ml" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njf-4D-Rwb">
+                                                <rect key="frame" x="0.0" y="117.5" width="108" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="6Ip-fp-l8q">
+                                        <rect key="frame" x="245.5" y="0.0" width="108.5" height="140.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzR-Bx-sHY">
+                                                <rect key="frame" x="0.0" y="0.0" width="108.5" height="108.5"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="DzR-Bx-sHY" secondAttribute="height" multiplier="1:1" id="y1k-xn-KUj"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                                                <state key="normal" image="Glass"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="18"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addWaterOne:" destination="dBr-4T-vE0" eventType="touchUpInside" id="72i-CV-JTq"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="800 ml" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFw-hN-yUu">
+                                                <rect key="frame" x="0.0" y="117.5" width="108.5" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Uuj-tw-GMq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MTg-gV-zH4" firstAttribute="leading" secondItem="Uuj-tw-GMq" secondAttribute="leading" constant="30" id="E7n-kC-Hcc"/>
+                            <constraint firstItem="Uuj-tw-GMq" firstAttribute="trailing" secondItem="mhB-0B-g6i" secondAttribute="trailing" constant="30" id="Mp2-XN-bNL"/>
+                            <constraint firstItem="Uuj-tw-GMq" firstAttribute="trailing" secondItem="MTg-gV-zH4" secondAttribute="trailing" constant="30" id="WYX-Ie-Hqp"/>
+                            <constraint firstAttribute="bottom" secondItem="ux6-kG-KUr" secondAttribute="bottom" id="hGa-LS-R9q"/>
+                            <constraint firstItem="Uuj-tw-GMq" firstAttribute="bottom" secondItem="mhB-0B-g6i" secondAttribute="bottom" constant="30" id="jnt-FM-bct"/>
+                            <constraint firstItem="ux6-kG-KUr" firstAttribute="top" secondItem="MTg-gV-zH4" secondAttribute="bottom" constant="320" id="yD3-U9-uPD"/>
+                            <constraint firstItem="mhB-0B-g6i" firstAttribute="leading" secondItem="Uuj-tw-GMq" secondAttribute="leading" constant="30" id="yXU-m6-xD0"/>
+                            <constraint firstItem="MTg-gV-zH4" firstAttribute="top" secondItem="Uuj-tw-GMq" secondAttribute="top" constant="50" id="ysu-GC-6rz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addWaterCons" destination="f19-he-LyY" id="2fm-hb-Vhp"/>
+                        <outlet property="subTitleLabel" destination="RDX-8Y-U5e" id="3je-i0-UGC"/>
+                        <outlet property="titleLabel" destination="Qbd-LL-jBa" id="VTF-wa-2XJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wnp-hy-zXd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.768115942028992" y="229.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bottle" width="66" height="66"/>
+        <image name="Glass" width="66" height="66"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
